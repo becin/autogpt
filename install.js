@@ -9,16 +9,12 @@ module.exports = {
         ]
       }
     },
-    // Delete this step if your project does not use torch
     {
-      method: "script.start",
+      method: "shell.run",
       params: {
-        uri: "torch.js",
-        params: {
-          venv: "env",                // Edit this to customize the venv folder path
-          path: "app",                // Edit this to customize the path to start the shell from
-          // xformers: true   // uncomment this line if your project requires xformers
-        }
+        message: [
+          "conda install -y conda-forge::poetry"
+        ]
       }
     },
     // Edit this step with your custom install commands
@@ -26,18 +22,23 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "env",                // Edit this to customize the venv folder path
-        path: "app",                // Edit this to customize the path to start the shell from
+        path: "app/rnd/autogpt_server",                // Edit this to customize the path to start the shell from
         message: [
-          "pip install gradio devicetorch",
-          "pip install -r requirements.txt"
+          "poetry config virtualenvs.in-project true",
+          "poetry install",
+          "poetry run prisma generate",
+          "poetry run prisma migrate dev --name init",
         ]
       }
     },
     {
-      method: "fs.link",
+      method: "shell.run",
       params: {
-        venv: "app/env"
+        path: "app/rnd/autogpt_builder",                // Edit this to customize the path to start the shell from
+        message: [
+          "npm install"
+        ]
       }
-    }
+    },
   ]
 }

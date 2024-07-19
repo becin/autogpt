@@ -6,7 +6,7 @@ module.exports = {
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installing = info.running("install.js")
-    let installed = info.exists("app/env")
+    let installed = info.exists("app/rnd/autogpt_server/env") && info.exists("app/rnd/autogpt_builder/node_modules")
     let running = info.running("start.js")
     if (installing) {
       return [{
@@ -63,6 +63,10 @@ module.exports = {
         icon: "fa-solid fa-plug",
         text: "Install",
         href: "install.js",
+      }, {
+        icon: "fa-regular fa-circle-xmark",
+        text: "Reset",
+        href: "reset.js",
       }]
     }
   }
