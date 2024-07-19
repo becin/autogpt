@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "2.0",
   title: "autogpt",
-  description: "",
+  description: "AutoGPT is a powerful tool that lets you create and run intelligent agents https://github.com/Significant-Gravitas/AutoGPT",
   icon: "icon.png",
   pre: [{
     icon: "ollama.png",
