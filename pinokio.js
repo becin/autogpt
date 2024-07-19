@@ -4,6 +4,12 @@ module.exports = {
   title: "autogpt",
   description: "",
   icon: "icon.png",
+  pre: [{
+    icon: "ollama.png",
+    title: "Ollama",
+    description: "Get up and running with large language models.",
+    href: "https://ollama.com/"
+  }],
   menu: async (kernel, info) => {
     let installing = info.running("install.js")
     let installed = info.exists("app/rnd/autogpt_server/env") && info.exists("app/rnd/autogpt_builder/node_modules")
