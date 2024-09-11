@@ -14,7 +14,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git reset --hard dc1077f8934cd5a65b617fc02fcedcd162c71a04"
+          "git reset --hard 9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
         ]
       }
     },
