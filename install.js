@@ -12,6 +12,15 @@ module.exports = {
     {
       method: "shell.run",
       params: {
+        path: "app",
+        message: [
+          "git reset --hard dc1077f8934cd5a65b617fc02fcedcd162c71a04"
+        ]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
         message: [
           "conda install -y conda-forge::poetry"
         ]
