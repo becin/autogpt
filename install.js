@@ -14,7 +14,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git reset --hard //9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
+          "git reset --hard" // 9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
         ]
       }
     },
@@ -22,11 +22,8 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "npm -v",
-          "node -v",
-          "docker -v",
-          "docker-compose -v",
-          // "conda install -y conda-forge::poetry"
+          "conda install conda-forge::docker-compose",
+          "conda install -y conda-forge::poetry"
         ]
       }
     },
