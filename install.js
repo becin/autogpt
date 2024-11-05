@@ -36,7 +36,7 @@ module.exports = {
         message: [
           //"git submodule update --init --recursive",
           //"cd ../../autogpt_platform && cp supabase/docker/.env.example .env",
-          "cd ../../autogpt_platform && cp frontend/.env.example frontend/.env",
+          //"cd ../../autogpt_platform && cp frontend/.env.example frontend/.env",
           //"poetry config virtualenvs.in-project true",
           //"poetry install",
           //"poetry run prisma generate",
@@ -49,7 +49,7 @@ module.exports = {
       params: {
         path: "app/rnd/autogpt_builder",                // Edit this to customize the path to start the shell from
         message: [
-          //"npm install"
+          "npm install"
         ]
       }
     },
