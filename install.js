@@ -22,7 +22,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "conda install conda-forge::docker-compose",
+          "conda install -y conda-forge::docker-compose",
           "conda install -y conda-forge::poetry"
         ]
       }
