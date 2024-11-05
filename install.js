@@ -36,7 +36,7 @@ module.exports = {
         message: [
           //"git submodule update --init --recursive",
           //"cd ../../autogpt_platform && cp supabase/docker/.env.example .env",
-          "cd ../../autogpt_platform/frontend && cp frontend/.env.example frontend/.env",
+          "cd ../../autogpt_platform && cp frontend/.env.example frontend/.env",
           //"poetry config virtualenvs.in-project true",
           //"poetry install",
           //"poetry run prisma generate",
