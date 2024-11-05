@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/Significant-Gravitas/AutoGPT app",
+          //"git clone https://github.com/Significant-Gravitas/AutoGPT app",
         ]
       }
     },
@@ -14,7 +14,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git reset --hard" // 9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
+          //"git reset --hard" // 9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
         ]
       }
     },
@@ -22,8 +22,8 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "conda install -y conda-forge::docker-compose",
-          "conda install -y conda-forge::poetry"
+          //"conda install -y conda-forge::docker-compose",
+          //"conda install -y conda-forge::poetry"
         ]
       }
     },
@@ -34,6 +34,8 @@ module.exports = {
         venv: "env",                // Edit this to customize the venv folder path
         path: "app/rnd/autogpt_server",                // Edit this to customize the path to start the shell from
         message: [
+          "git submodule update --init --recursive",
+          
           //"poetry config virtualenvs.in-project true",
           //"poetry install",
           //"poetry run prisma generate",
