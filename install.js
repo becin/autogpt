@@ -14,7 +14,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git reset --hard 9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
+          "git reset --hard //9ae6389c6cd4c8ae0b1f36f3e8e21d09cb963135"
         ]
       }
     },
@@ -22,7 +22,11 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "conda install -y conda-forge::poetry"
+          "npm -v",
+          "node -v",
+          "docker -v",
+          "docker-compose -v",
+          // "conda install -y conda-forge::poetry"
         ]
       }
     },
@@ -33,10 +37,10 @@ module.exports = {
         venv: "env",                // Edit this to customize the venv folder path
         path: "app/rnd/autogpt_server",                // Edit this to customize the path to start the shell from
         message: [
-          "poetry config virtualenvs.in-project true",
-          "poetry install",
-          "poetry run prisma generate",
-          "poetry run prisma migrate dev --name init",
+          //"poetry config virtualenvs.in-project true",
+          //"poetry install",
+          //"poetry run prisma generate",
+          //"poetry run prisma migrate dev --name init",
         ]
       }
     },
@@ -45,7 +49,7 @@ module.exports = {
       params: {
         path: "app/rnd/autogpt_builder",                // Edit this to customize the path to start the shell from
         message: [
-          "npm install"
+          //"npm install"
         ]
       }
     },
