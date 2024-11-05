@@ -35,7 +35,7 @@ module.exports = {
         path: "app/rnd/autogpt_server",                // Edit this to customize the path to start the shell from
         message: [
           //"git submodule update --init --recursive",
-          "cd ../../autogpt_platform && cp supabase/docker/.envexample .env"
+          "cd ../../autogpt_platform && cp supabase/docker/.env.example .env"
           //"poetry config virtualenvs.in-project true",
           //"poetry install",
           //"poetry run prisma generate",
